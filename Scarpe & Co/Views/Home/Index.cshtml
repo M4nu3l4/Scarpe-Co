@@ -1,0 +1,34 @@
+﻿@*9e68571e-34b3-4ba3-8c4e-00f665138246 *@
+
+@model List<Scarpe___Co.Models.Shoe>
+
+<h2>Scarpe Nike</h2>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>Nome</th>
+            <th>Prezzo</th>
+            <th>Immagine</th>
+            <th>Azioni</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var shoe in Model)
+        {
+            <tr>
+                <td>@shoe.Title</td>
+                <td>€ @shoe.Price</td>
+                <td>
+                    <img src="@shoe.ImageUrl" alt="@shoe.Title" style="max-width: 100px;" />
+                </td>
+                <td>
+                    <a asp-controller="Shoe" asp-action="Details" asp-route-id="@shoe.Id" class="btn btn-primary">Dettagli</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
+
+
+

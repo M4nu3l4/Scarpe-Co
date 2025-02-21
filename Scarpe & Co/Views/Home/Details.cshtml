@@ -1,0 +1,13 @@
+﻿@model Scarpe___Co.Models.Shoe
+
+@{
+    ViewData["Title"] = Model.Name;
+}
+
+<h1 class="text-center">@Model.Name</h1>
+<p class="text-center">€ @Model.Price</p>
+<p class="text-center">@Model.Description</p>
+
+<div class="text-center">
+    <img src="@Model.ImageUrl" class="img-fluid" style="max-width: 400px;" />
+</div>
